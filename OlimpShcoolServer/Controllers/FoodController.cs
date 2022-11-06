@@ -17,6 +17,7 @@ namespace FoodServer.Controllers
         }
 
         [HttpGet]
+        [Route("food")]
         public async Task<IEnumerable<FoodEntries>> getAllFood()
         {
             List<FoodEntries> data = await dbContext.FoodEntries.ToListAsync();
@@ -24,6 +25,7 @@ namespace FoodServer.Controllers
         }
 
         [HttpGet]
+        [Route("food/bydate")]
         public async Task<IEnumerable<FoodEntries>> getFoodByDate(int year, int month, int day)
         {
             DateTime date = new DateTime(year, month, day);
@@ -35,6 +37,7 @@ namespace FoodServer.Controllers
         }
 
         [HttpGet]
+        [Route("food/bystudent")]
         public async Task<IEnumerable<FoodEntries>> getFoodByStudentId(int student_id)
         {
             List<FoodEntries> data = await dbContext.FoodEntries.Where(u => u.student == student_id 
@@ -422,6 +425,7 @@ namespace FoodServer.Controllers
         }
 
         [HttpPost]
+        [Route("food/createFood")]
         public async Task<string> createFood([FromBody] FoodEntries foodEntries)
         {
             try
@@ -439,7 +443,7 @@ namespace FoodServer.Controllers
 
 
             /*
-             * /api/food
+             * /food/createFood
                 {
                     "student": 1,
                     "date": "2022-10-24",
@@ -451,13 +455,12 @@ namespace FoodServer.Controllers
                     "is_lunch_competition": true,
                     "is_after_lunch_competition": false,
                     "is_dinner_competition": false
-
-
                 }
              */
         }
 
         [HttpDelete]
+        [Route("food/deleteFood")]
         public async Task<string> deleteFoodByDate([FromBody] DeletedFood deletedFood)
         {
 
@@ -468,7 +471,7 @@ namespace FoodServer.Controllers
             return "Deleted food";
 
             /* 
-             * /api/food
+             * food/deleteFood
                 {
                     "year": 2022,
                     "month": 10,
