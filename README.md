@@ -12,7 +12,7 @@
 <h4><addres>/users/createUser<h4/>
   
 <h4>
-  Пример отправки данных:
+  Пример отправки данных: <br/>
 {
   "login": "test5",
   "password": "test5",
