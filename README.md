@@ -26,38 +26,38 @@
   <h4/>
   
 [GET]
-Получить всю информацию по питанию
-<addres>/food
+<h3>Получить всю информацию по питанию<h3/>
+<h4><addres>/food<h4/>
   
 [GET]
-Получить информацию по питанию за день
-Пример:
-<addres>/food/bydate?year=2022&month=10&day=24
+<h3>Получить информацию по питанию за день<h3/>
+<h4>Пример:<br/>
+<addres>/food/bydate?year=2022&month=10&day=24<h4/>
   
 [GET]
-Получить информацию по питанию по определённому студенту
-Пример:
-<addres>/food/bystudent?student_id=3
+<h3>Получить информацию по питанию по определённому студенту<h3/>
+<h4>Пример:<br/>
+<addres>/food/bystudent?student_id=3<h4/>
   
 [GET]
-Получение подробной Excel таблицы по каждому студенту об его питании на определенный день
-Пример:
-<addres>/food/document/getDocumentFoodNow?year=2022&month=10&day=24
+<h3>Получение подробной Excel таблицы по каждому студенту об его питании на определенный день<h3/>
+<h4>Пример:<br/>
+<addres>/food/document/getDocumentFoodNow?year=2022&month=10&day=24<h4/>
   
 [GET]
-Получение Excel таблицы по кол-ву порций на сегодняшний день
-Пример:
-<addres>/food/document/getDocumentCountPersonFood?year=2022&month=10&day=24
+<h3>Получение Excel таблицы по кол-ву порций на сегодняшний день<h3/>
+<h4>Пример:<br/>
+<addres>/food/document/getDocumentCountPersonFood?year=2022&month=10&day=24<h4/>
   
 [GET]
-Получение Excel таблицы по кол-ву порций на текущий день
-Пример:
-<addres>/food/document/getDocumentFoodFoolMonth?year=2022&month=10
+<h3>Получение Excel таблицы по кол-ву порций на текущий день<h3/>
+<h4>Пример:<br/>
+<addres>/food/document/getDocumentFoodFoolMonth?year=2022&month=10<h4/>
   
 [POST]
-Создание питания на день студента
-<addres>/food/createFood
-Пример:
+<h3>Создание питания на день студента<h3/>
+<h4><addres>/food/createFood<br/>
+Пример:<br/>
 {
   "student": 1,
   "date": "2022-10-24",
@@ -69,16 +69,16 @@
   "is_lunch_competition": true,
   "is_after_lunch_competition": false,
   "is_dinner_competition": false
-}
+}<h4/>
   
 [DELETE] 
-Удаление питания на определенный день
-<addres>/food/deleteFood
-Пример:
+<h3>Удаление питания на определенный день<h3/>
+<h4><addres>/food/deleteFood<br/>
+Пример:<br/>
 {
   "year": 2022,
   "month": 10,
   "day": 24,
   "student_id": 1
-}
+}<h4/>
   
